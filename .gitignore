@@ -1,0 +1,81 @@
+# Dependencies
+/node_modules
+/vendor
+
+# Environment & secrets (never commit)
+.env
+.env.*
+!.env.example
+.env.backup
+.env.production
+.env.local
+.env.staging
+/auth.json
+
+# Application keys & certificates
+*.pem
+*.key
+*.crt
+*.p12
+/storage/*.key
+
+# Database files (local data)
+/database/*.sqlite
+/database/*.sqlite-journal
+/database/*.sqlite-wal
+/database/*.sqlite-shm
+
+# Laravel storage (logs, sessions, cache — may contain user data)
+/storage/*.key
+/storage/pail
+/storage/logs/
+/storage/framework/cache/data/
+/storage/framework/sessions/
+/storage/framework/testing/
+/storage/framework/views/
+/storage/app/private/
+
+# Bootstrap cache
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
+
+# Public build artifacts
+/public/build
+/public/hot
+/public/storage
+
+# Testing & debug
+.phpunit.result.cache
+.phpunit.cache
+/.phpunit.cache
+
+# IDE & editor (may contain local paths / tokens)
+/.idea
+/.vscode
+/.fleet
+/.nova
+/.zed
+.phpactor.json
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Homestead / Vagrant (may contain VM credentials)
+Homestead.json
+Homestead.yaml
+/.vagrant
+
+# NPM / Yarn logs
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+.pnpm-debug.log
+
+# Misc local overrides
+docker-compose.override.yml
+*.local.php
