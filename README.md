@@ -335,7 +335,7 @@ Authorization: Bearer {token}
 ### users
 | Column | Type | Description |
 |--------|------|-------------|
-| id | bigint | Primary Key |
+| id | uuid| Primary Key |
 | name | string | User's full name |
 | email | string | User's email (unique) |
 | mobile | string | User's mobile number (unique) |
@@ -347,8 +347,8 @@ Authorization: Bearer {token}
 ### loans
 | Column | Type | Description |
 |--------|------|-------------|
-| id | bigint | Primary Key |
-| user_id | bigint | Foreign key to users |
+| id |uuid| Primary Key |
+| user_id |uuid | Foreign key to users |
 | amount | decimal | Loan amount |
 | tenure | integer | Loan tenure in months |
 | purpose | string | Loan purpose |
@@ -359,8 +359,8 @@ Authorization: Bearer {token}
 ### repayments
 | Column | Type | Description |
 |--------|------|-------------|
-| id | bigint | Primary Key |
-| loan_id | bigint | Foreign key to loans |
+| id | uuid | Primary Key |
+| loan_id | uuid | Foreign key to loans |
 | amount_paid | decimal | Amount paid |
 | payment_date | date | Payment date |
 | created_at | timestamp | Creation timestamp |
